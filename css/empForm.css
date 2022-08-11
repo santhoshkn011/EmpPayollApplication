@@ -118,3 +118,15 @@ body {
     border-radius: 50%;
     margin: left 5px;
 }
+/* UC5 */
+
+select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    font: normal normal normal 16px Roboto;
+    letter-spacing: 0px;
+    color: #42515f;
+    background-color: transparent;
+}
