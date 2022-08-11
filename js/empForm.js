@@ -65,3 +65,57 @@ function validateName() {
 //     }
 
 // }
+
+function save(event) {
+    alert("save")
+
+    event.preventDefault();
+    event.stopPropagation();
+
+    try {
+       let EmployeePayrollData= createEmployeePayroll();
+    } catch (e) {
+        return;
+    }
+
+}
+
+const createEmployeePayroll=()=>{
+    let employeePayrollData=new EmployeePayrollData();
+    try {
+        employeePayrollData.name=getInputValueById('#name');
+    } catch (error) {
+        setTextValue('.text-error',e);
+        throw e;
+    }
+
+    employeePayrollData.profilePic=getSelectedValues('[name=profile]').pop();
+    employeePayrollData.gender=getSelectedValues('[name=gender]').pop();
+    employeePayrollData.department=getSelectedValues('[name=department]');
+    employeePayrollData.salary=getSelectedValues('#salary');
+    employeePayrollData.note=getInputValueById('#notes');
+    let date=getInputValueById('#day')+" "+getInputValueById('#month')+" "+
+            getInputValueById('#year');
+    employeePayrollData.date=Date.parse(date);
+    alert(employeePayrollData.toString());
+    return employeePayrollData;
+}
+
+const getSelectedValues=(propertyValue)=>{
+    let allItmes=document.querySelectorAll(propertyValue);
+    let selItems=[];
+    allItmes.forEach(item =>{
+        if(item.checked) selItems.push(item.value);
+    });
+    return selItems;
+}
+
+const getInputValueById=(id)=>{
+    let value=document.querySelector(id).value;
+    return value;
+}
+
+const getInputElementValue=(id)=>{
+    let value=document.getElementById(id).value;
+    return value;
+}
