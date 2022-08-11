@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     height: 100%;
@@ -41,9 +45,6 @@ body {
     color: #42515f;
 }
 
-* {
-    box-sizing: border-box;
-}
 
 /*UC2*/
 
