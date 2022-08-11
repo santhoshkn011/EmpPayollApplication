@@ -97,3 +97,23 @@ body {
     border-radius: 4px;
     resize: vertical;
 } 
+/*UC3*/
+
+.profile-radio-content {
+    display: flex;
+    flex-direction: row;
+    display: flex;
+}
+/*CSS Selectors*/
+.profile-radio-content>label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.profile {
+    display: flex;
+    width: 50px;
+    border-radius: 50%;
+    margin: left 5px;
+}
