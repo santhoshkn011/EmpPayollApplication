@@ -11,11 +11,11 @@ class EmployeePayrollData {
     }
 
     set name(name) {
-        let nameRegex = RegExp('^[A-Z]{1}[a-zA-Z\\s]{2,}$');
+        let nameRegex = RegExp('^[A-Z]{1}[a-zA-Z\\s]{3,}$');
         if (nameRegex.test(name))
             this._name = name;
         else
-            throw new Error("Invalid Name");
+            throw new Error("Name is Incorrect");
     }
 
     get profilePic() {
@@ -76,5 +76,4 @@ class EmployeePayrollData {
         return "id=" + this.id + "Name = " + this.name + ", profilePic = " + this.profilePic + ", Gender = " + this.gender + 
         ", Department = " + this.department + ", Salary = " + this.salary + ", Start Date = " + employeeDate + ", Notes = " + this.notes;
     }
-    
 }
