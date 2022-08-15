@@ -1,32 +1,34 @@
 window.addEventListener('DOMContentLoaded', (event) => {
-    salaryOutput();
-    validateName();
     validateDate();
+    validatename();
+    SalaryRange();
 
 });
-
-function salaryOutput() {
+function SalaryRange() {
     const salary = document.querySelector('#salary');
     const output = document.querySelector('.salary-output');
     output.textContent = salary.value;
-    salary.addEventListener('input', function() {
+    salary.addEventListener('input', function () {
         output.textContent = salary.value;
-
     });
 }
-
-function validateName() {
-    let name = document.querySelector('#name');
-    let textError = document.querySelector('.text-error');
-    name.addEventListener('input', function() {
-        let nameRegex = RegExp('^[A-Z]{1}[a-zA-Z\\s]{2,}$');
-        if (nameRegex.test(name.value)) {
+function validatename() {
+    const name = document.querySelector('#name');
+    const textError = document.querySelector('.text-error');
+    name.addEventListener('input', function () {
+        if (name.value.length == 0) {
             textError.textContent = "";
-        } else {
-            textError.textContent = "Name is Incorrect"
+            return;
+        }
+        try {
+            (new EmployeePayrollData()).name = name.value;
+            textError.textContent = "";
+        } catch (e) {
+            textError.textContent = e;
         }
     });
 }
+
 
 function validateDate() {
     let day = document.querySelector('#day');
@@ -38,7 +40,7 @@ function validateDate() {
 }
 
 function checkDate() {
-    let dateError = document.querySelector('.dates-error');
+    let dateError = document.querySelector('.startDate-error');
     let date = day.value + " " + month.value + " " + year.value;
     try {
         checkStartDate(new Date(Date.parse(date)));
@@ -56,7 +58,7 @@ function checkStartDate(startDate) {
     }
     let differnce = Math.abs(currentDate.getTime() - startDate.getTime());
     let date = differnce / (1000 * 60 * 60 * 24);
-    if (date <30) {
+    if (date < 30) {
         throw new Error("Start date is beyond 30 days");
     }
 }
@@ -89,11 +91,10 @@ const createEmployeePayroll=()=>{
     employeePayrollData.profilePic=getSelectedValues('[name=profile]').pop();
     employeePayrollData.gender=getSelectedValues('[name=gender]').pop();
     employeePayrollData.department=getSelectedValues('[name=department]');
-    employeePayrollData.salary=getSelectedValues('#salary');
+    employeePayrollData.salary = getInputValueById('#salary');
     employeePayrollData.note=getInputValueById('#notes');
-    let date=getInputValueById('#day')+" "+getInputValueById('#month')+" "+
-            getInputValueById('#year');
-    employeePayrollData.date=Date.parse(date);
+    dateString = document.querySelector("#month").value + " " + document.querySelector("#day").value + ", " + document.querySelector("#year").value;
+    employeePayrollData.startDate = new Date(dateString);
     //alert(employeePayrollData.toString());
     return employeePayrollData;
 }

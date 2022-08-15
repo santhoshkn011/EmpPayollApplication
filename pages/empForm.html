@@ -57,9 +57,9 @@
             <div class="row-content">
                 <label class="label text" for="gender">Gender</label>
                 <div>
-                    <input type="radio" id="male" name="gender" value="male">
+                    <input type="radio" id="male" name="gender" value="Male">
                     <label class="text" for="male">Male</label>
-                    <input type="radio" id="female" name="gender" value="female">
+                    <input type="radio" id="female" name="gender" value="Female">
                     <label class="text" for="female">Female</label>
                 </div>
             </div>
@@ -67,16 +67,28 @@
             <div class="row-content">
                 <label class="label text" for="department">Department</label>
                 <div>
-                    <input class="checkbox" type="checkbox" id="hr" name="hr" value="HR">
-                    <label class="text" for="hr">HR</label>
-                    <input class="checkbox" type="checkbox" id="sales" name="sales" value="Sales">
-                    <label class="text" for="sales">Sales</label>
-                    <input class="checkbox" type="checkbox" id="finance" name="Finance" value="Finance">
-                    <label class="text" for="finance">Finance</label>
-                    <input class="checkbox" type="checkbox" id="engineer" name="Engineer" value="Engineer">
-                    <label class="text" for="engineer">Engineer</label>
-                    <input class="checkbox" type="checkbox" id="others" name="Others" value="Others">
-                    <label class="text" for="others">Others</label>
+                    <div>
+                        <label>
+                            <input class="checkbox" type="checkbox" id="hr" name="department" value="HR">
+                            <label class="text" for="hr">HR</label>
+                        </label>
+                        <label>
+                            <input class="checkbox" type="checkbox" id="sales" name="department" value="Sales">
+                            <label class="text" for="sales">Sales</label>
+                        </label>
+                        <label>
+                            <input class="checkbox" type="checkbox" id="finance" name="department" value="Finance">
+                            <label class="text" for="finance">Finance</label>
+                        </label>
+                        <label>
+                            <input class="checkbox" type="checkbox" id="engineer" name="department" value="Engineer">
+                            <label class="text" for="engineer">Engineer</label>
+                        </label>
+                        <label>
+                            <input class="checkbox" type="checkbox" id="others" name="department" value="Others">
+                            <label class="text" for="others">Others</label>
+                        </label>
+                    </div>
                 </div>
             </div>
 
@@ -144,8 +156,9 @@
                         <option value="2018">2018</option>
                         <option value="2017">2017</option>
                     </select>
-                    <error-output class="dates-error" for="error"></error-output>
                 </div>
+                <valid-message class="valid-startDate" for="startDate"></valid-message>
+                <error-output class="startDate-error" for="startDate"></error-output>
             </div>
             <!--UC6-->
             <div class="row-content">
@@ -162,8 +175,11 @@
             </div>
         </form>
     </div>
-    <script src="../js/empForm.js"></script> 
-    <script src="../js/empPayrollData.js"></script> 
+    <script src="../js/empHomePage.js"></script>
+    <script src="../js/empForm.js"></script>
+    <script src="../js/empPayrollData.js"></script>
+    <script src="../js/site_properties.js"></script>
+    <script src="../js/utility.js"></script>
 </body>
 
 </html>
