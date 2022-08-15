@@ -79,7 +79,7 @@ body {
 }
 
 .emp-count {
-    background-color: #0c42a7;
+    background-color: #3d61a5;
     color: #ffffff;
     border-radius: 50%;
     font-size: 15px;
@@ -92,10 +92,10 @@ body {
     font-size: 20px;
     font-family: Roboto;
     font-weight: 400;
-    letter-spacing: 0px;
+    letter-spacing: 1px;
     color: #ffffff;
-    background: #0c95a7 0% 0% no-repeat padding-box;
-    border-radius: 9px;
+    background: #0c5ca7 0% 0% no-repeat padding-box;
+    border-radius: 20px;
     opacity: 1;
     border: 2px solid #969696;
     padding: 7px 7px;
@@ -108,7 +108,7 @@ body {
 
 .plus-icon {
     padding-right: 5px;
-    padding-left: 2px;
+    padding-left: 1px;
 }
 
 /*UC3*/
