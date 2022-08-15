@@ -79,7 +79,7 @@ body {
 }
 
 .emp-count {
-    background-color: #82a70c;
+    background-color: #0c42a7;
     color: #ffffff;
     border-radius: 50%;
     font-size: 15px;
@@ -94,7 +94,7 @@ body {
     font-weight: 400;
     letter-spacing: 0px;
     color: #ffffff;
-    background: #82A70C 0% 0% no-repeat padding-box;
+    background: #0c95a7 0% 0% no-repeat padding-box;
     border-radius: 9px;
     opacity: 1;
     border: 2px solid #969696;
@@ -131,14 +131,8 @@ th {
     padding: 5px 8px;
 }
 
-.tr {
-    background: #1b2630 0% 0% no-repeat padding-box;
-}
-
-.th {
-    background-color: #1b2630;
-    background: #1b2630 0% 0% no-repeat padding-box;
-    border-radius: 3px 3px 0px 0px;
+th {
+    background: #103c3f 0% 0% no-repeat padding-box;
     text-align: left;
     font: normal normal medium 18px/24px Roboto;
     letter-spacing: 0px;
@@ -175,7 +169,7 @@ td img {
 }
 
 .dept-label {
-    background-color: #e9fea5;
+    background-color: #a1e4e9;
     border-radius: 40%;
     width: fit-content;
     padding: 1px 7px;
